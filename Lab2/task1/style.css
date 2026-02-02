@@ -1,0 +1,150 @@
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    margin:0;
+    background-color:  #f0f2f5;
+    color: #1c1e21;
+    line-height: 1.15;
+    overflow-y:scroll;
+    
+}
+.container{
+    display: flex;
+    gap:120px;
+    min-height: 590px; 
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 130px;
+}
+@media (max-width: 880px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        margin:0;
+        padding:0;
+        gap:80px;
+        text-align: center;
+    }
+}
+
+.left{
+    max-width: 460px;
+}
+
+img{
+    width:320px;
+    
+    margin-left: -28px;
+    margin-bottom: -21px;
+    margin-top: 45px;
+}
+hr {
+    display: block;
+    width: auto;
+    height: 1px;
+    background:rgb(216, 216, 216);
+    flex-shrink: 0; 
+    border: none;
+    margin: 10px;
+}
+
+p {
+    font-size: 28px;
+    font-weight: 450;
+    margin-top: 10px; 
+}
+
+.card{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 7px 20px rgba(153, 153, 153, 0.376);
+    flex-direction: column;
+    width:400px;
+    height:350px;
+    padding: 10px;
+    display: flex;
+    margin-top: 0px;
+}
+input{
+    color:rgb(145, 145, 145);
+    font-size: 17px;
+    font-weight: 450;
+    border-radius: 6px;
+    border: 1px solid rgb(208, 208, 208);
+    margin: 6px;
+    padding: 15px;
+}
+input::placeholder{
+    color:#aeaeae;
+}
+input:focus{
+    border: 1px solid #1877f2;
+    outline: none;
+    box-shadow: 0 0 2px #1877f2;
+    color:black;
+}
+
+.login{
+    background:  #1877f2;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin: 6px;
+    margin-top:10px;
+    
+}
+.create-account{
+    background: #42b72a;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size:17px;
+
+    width: auto;
+    align-self:center;
+    margin: 12px;
+}
+.create-account:hover{
+    background:#379c23;
+}
+
+.forgot{
+    text-align: center;
+    color:#1877f2;
+    padding: 16px;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+footer.language-bar {
+  width: 100%;
+
+  background: #ffffff;
+  padding: 12px 0;
+  border:none;
+  font-size: 12px;
+  color: #919191;
+}
+
+.language-bar a {
+  margin: 0 8px;
+  color: #737373;
+  text-decoration: none;
+}
+.block{
+    margin: 20px auto 0;
+    width: 1020px;
+}
+
+.language-bar a:hover {
+  text-decoration: underline;
+}
