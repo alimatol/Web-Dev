@@ -1,0 +1,26 @@
+
+<div class="product-container">
+  <div class="product-card" *ngFor="let product of products">
+
+      <img [src]="product.image" [alt]="product.name"class="main-img clickable"(click)="nextImage(product)">
+
+    <hr>
+    <p class="name">
+      <a [href]="product.link" target="_blank">{{ product.name }}</a>
+    </p>
+
+    <p class="rating">
+      <span *ngFor="let star of [1,2,3,4,5]; let i = index">
+        <span [class.filled]="i < roundRating(product.rating)">★</span>
+      </span>
+      ({{ product.rating }})
+    </p>
+    <p class="description">{{ product.description }}</p>
+
+    <p class="price"> {{ product.price}}₸</p>
+    <div class = "share">
+      <button (click) = "shareWhatsApp(product.link)">WhatsApp</button>
+      <button (click) = "shareTelegram(product.link, product.name)">Telegram</button>
+    </div>
+  </div>
+</div>
