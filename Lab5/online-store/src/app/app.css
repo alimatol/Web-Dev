@@ -1,0 +1,26 @@
+
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
+.categories button{
+    text-transform: uppercase;
+    background:none;
+    padding:20px;
+    font-size: 20px;
+    color:rgb(42, 94, 190); 
+    border: 2px solid rgb(42, 94, 190);
+}
+.categories button.active-category {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+p{
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+

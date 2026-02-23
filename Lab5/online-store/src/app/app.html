@@ -1,0 +1,17 @@
+<div class = "main-page">
+        @if (selectedCategoryId === null){
+        <p>Select category</p>
+    }
+    @else {
+        <product-list [products] ="products"
+        (delete) = "onDelete($event)"></product-list>
+    }
+    <hr style="width: 70%; margin-bottom: 10px;">
+    <div class = "categories">
+        @for (category of categories; track category.id){
+            <button (click) = "selectCategory(category.id)" [class.active] = "selectedCategoryId === category.id">{{category.name}}</button>
+        }
+    </div>
+
+
+</div>

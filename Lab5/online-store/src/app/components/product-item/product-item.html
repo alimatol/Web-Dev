@@ -1,0 +1,27 @@
+  <div class = "product-card">
+        <img [src] = "product().image" [alt] = "product().name">
+        <hr>
+        <p class = "name"> 
+            <a href = "{{product().link}} "target="_blank">{{product().name}}</a>
+        </p>
+
+        <p class = "rating">
+            <span *ngFor="let star of [1,2,3,4,5]; let i = index">
+                <span [class.filled]="i < roundRating(product().rating)">★</span>
+            </span>
+             ({{ product().rating }})
+        </p>
+        <details>
+            <summary>Details</summary>
+            <p class = "description">{{product().description}}</p>
+        </details>
+        
+        <div class = "share">
+            <button (click) = "shareWhatsApp(product().link)">WhatsApp</button>
+            <button (click) = "shareTelegram(product().link, product.name)">Telegram</button>
+        </div>
+        <div class = "extra-btns">
+            <button id = "like-btn" (click)="like()" [style.color]="liked ? 'grey' : 'red'">❤ </button>
+            <button id = "delete-btn" (click)="remove()" >Delete</button>
+        </div>
+    </div>
