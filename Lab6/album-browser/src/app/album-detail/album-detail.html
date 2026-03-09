@@ -1,0 +1,19 @@
+<div *ngIf="loading">Loading album details...</div>
+<a routerLink="/albums" class = "back-btn">Back</a>
+<div *ngIf="!loading && album" class = "album-details">
+  
+  <p id = "header">Album {{album.id}}</p>
+
+  <div class = "main">
+     <p>User ID: {{album.userId}}</p>
+  Title:{{album.title}}
+  <label>
+    <input [(ngModel)]="album.title" />
+  </label>
+  
+  <button (click)="save()">Save</button>
+
+  <a [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
+  </div>
+ 
+</div>
